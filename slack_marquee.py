@@ -47,7 +47,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     msg = args.message
 
-    with open("SLACK_BOT_TOKEN", 'w+') as f:
+    with open("SLACK_BOT_TOKEN", 'r+') as f:
         SLACK_BOT_TOKEN = f.readline()
     if SLACK_BOT_TOKEN == "":
         print("SLACK_BOT_TOKEN not read or set")
